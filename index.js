@@ -5,7 +5,18 @@ const app=express()
 module.exports=app
 app.use(cors())
 app.use(bodyparser.json())
+require("./database/datasource")
+require("./models/Role.model")
+require("./models/Module.model")
+require("./models/user.model")
+require('./models/Feature.model')
+require('./models/Feature_Role.model')
+require("./router/rolerouter")
+require("./router/userouter")
+require("./router/Modulerouter")
+require("./router/Featurerouter")
+require("./router/permision")
 
-app.listen(2000,()=>{
+app.listen(6000,()=>{
     console.log("server connected")
 })

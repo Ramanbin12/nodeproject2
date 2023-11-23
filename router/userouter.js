@@ -1,0 +1,8 @@
+const {insertuserController,updateuserController,deleteuserController,selectuserController,userRoleController}=require("../controllers/userController")
+// const middleware=require("../middleware/middleware")
+const app=require("../index")
+app.get("/selectuser",selectuserController)
+app.post("/insertuser",insertuserController)
+app.patch("/updateuser",updateuserController)
+app.delete("/deleteuser",deleteuserController)
+app.post("/login",userRoleController)
